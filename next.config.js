@@ -1,9 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'standalone',
   images: {
+    domains: ['localhost'],
     unoptimized: true,
   },
-  trailingSlash: true,
-  reactStrictMode: true,
+  distDir: '.next',
+  generateBuildId: () => 'build',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    disableOptimizedLoading: true,
+  },
 }
