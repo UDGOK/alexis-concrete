@@ -1,39 +1,55 @@
 # Alexis Concrete Website
 
-A modern, professional website for Alexis Concrete built with Next.js, React, and TailwindCSS.
+A modern, responsive website for Alexis Concrete built with Next.js 14, TailwindCSS, and Framer Motion.
 
-## Features
+## Current State (as of December 22, 2024)
 
-- Responsive design
-- Modern UI/UX with smooth animations
-- Service pages for Asphalt, Concrete, and Parking Lot Striping
-- Contact form integration
-- SEO optimized
-
-## Getting Started
-
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Run the development server:
-```bash
-npm run dev
-```
-
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Technology Stack
-
-- Next.js 14
-- React 18
+### Tech Stack
+- Next.js 14.0.4
 - TailwindCSS
+- Framer Motion
 - TypeScript
-- Framer Motion for animations
+
+### Key Features
+1. **Modern Design**
+   - Responsive layout
+   - Clean, professional aesthetic
+   - Optimized images and performance
+
+2. **Navigation**
+   - Full-screen overlay menu (inspired by wearemotto.com)
+   - Smooth animations
+   - Mobile-responsive hamburger menu
+   - Contact information panel
+
+3. **Sections**
+   - Hero section with call-to-action
+   - Services showcase
+   - Project portfolio
+   - About section
+   - Contact form
+
+### Deployment
+- Deployed on Vercel
+- Production URL: https://alexis-concrete-ms7obsf55-hyasir786s-projects.vercel.app
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
 
 ## Project Structure
-
 ```
 alexis-concrete/
 ├── app/
@@ -44,5 +60,6 @@ alexis-concrete/
 │   └── Navigation.tsx
 ├── public/
 │   └── images/
+├── next.config.js
+├── tailwind.config.ts
 └── package.json
-```
