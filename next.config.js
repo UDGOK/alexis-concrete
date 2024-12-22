@@ -10,6 +10,7 @@ const nextConfig = {
       },
     ],
   },
+  output: 'standalone',
   experimental: {
     appDir: true,
   },
@@ -20,4 +21,8 @@ const nextConfig = {
     }
     return config
   },
+  // Add build trace configuration
+  trailingSlash: false,
+  poweredByHeader: false,
+  generateBuildId: () => 'build',
 }
