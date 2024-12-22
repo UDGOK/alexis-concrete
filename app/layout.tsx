@@ -8,6 +8,7 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  weight: ['300', '400', '500'],
 })
 
 export const metadata: Metadata = {
@@ -21,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className={`min-h-screen flex flex-col antialiased`}>
+    <html lang="en" className={`${inter.variable} font-sans`}>
+      <body className="min-h-screen flex flex-col antialiased bg-white">
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />

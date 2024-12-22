@@ -19,7 +19,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       height: {
         '70vh': '70vh',
@@ -34,6 +34,9 @@ const config: Config = {
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
+      },
+      zIndex: {
+        '100': '100',
       },
     },
   },
