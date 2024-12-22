@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "framework": "nextjs",
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
+  "outputDirectory": "build",
+  "framework": null,
   "installCommand": "npm install",
-  "regions": ["iad1"]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "public": true,
+  "github": {
+    "silent": true
+  }
 }
