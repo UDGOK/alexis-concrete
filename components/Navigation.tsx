@@ -68,7 +68,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link 
             href="/" 
-            className={`text-2xl font-bold ${isOpen ? 'text-white' : 'text-black'} transition-colors duration-300`}
+            className={`text-2xl font-bold ${isOpen ? 'text-reserve-cream' : 'text-reserve-black'} transition-colors duration-300`}
           >
             Alexis Concrete
           </Link>
@@ -76,7 +76,7 @@ export default function Navigation() {
           {/* Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`flex flex-col items-end space-y-1.5 focus:outline-none ${isOpen ? 'text-white' : 'text-black'}`}
+            className={`flex flex-col items-end space-y-1.5 focus:outline-none ${isOpen ? 'text-reserve-cream' : 'text-reserve-black'}`}
             aria-label="Toggle Menu"
           >
             <motion.span
@@ -103,7 +103,7 @@ export default function Navigation() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-black z-40"
+            className="fixed inset-0 bg-reserve-black z-40"
           >
             <div className="container mx-auto px-6 h-screen flex items-center">
               <div className="w-full">
@@ -127,17 +127,17 @@ export default function Navigation() {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="group inline-block text-white text-6xl md:text-8xl font-medium hover:text-gray-400 transition-colors duration-300"
+                          className="group inline-block text-reserve-cream text-6xl md:text-8xl font-medium hover:text-reserve-gold transition-colors duration-300"
                         >
                           {item.name}
-                          <span className="block h-0.5 w-0 group-hover:w-full bg-white transition-all duration-300"></span>
+                          <span className="block h-0.5 w-0 group-hover:w-full bg-reserve-gold transition-all duration-300"></span>
                         </Link>
                       </motion.div>
                     ))}
                   </div>
 
                   {/* Contact Information */}
-                  <div className="text-white space-y-12">
+                  <div className="text-reserve-cream space-y-12">
                     <motion.div
                       variants={linkVariants}
                       initial="closed"
@@ -145,7 +145,7 @@ export default function Navigation() {
                       exit="closed"
                     >
                       <h3 className="text-xl font-medium mb-4">Contact</h3>
-                      <a href="tel:+19181234567" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
+                      <a href="tel:+19181234567" className="text-3xl font-medium hover:text-reserve-gold transition-colors duration-300">
                         (918) 123-4567
                       </a>
                     </motion.div>
@@ -157,7 +157,7 @@ export default function Navigation() {
                       exit="closed"
                     >
                       <h3 className="text-xl font-medium mb-4">Email</h3>
-                      <a href="mailto:info@alexisconcrete.com" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
+                      <a href="mailto:info@alexisconcrete.com" className="text-3xl font-medium hover:text-reserve-gold transition-colors duration-300">
                         info@alexisconcrete.com
                       </a>
                     </motion.div>
@@ -170,10 +170,10 @@ export default function Navigation() {
                     >
                       <h3 className="text-xl font-medium mb-4">Follow</h3>
                       <div className="flex space-x-8">
-                        <a href="#" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
+                        <a href="#" className="text-3xl font-medium hover:text-reserve-gold transition-colors duration-300">
                           Instagram
                         </a>
-                        <a href="#" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
+                        <a href="#" className="text-3xl font-medium hover:text-reserve-gold transition-colors duration-300">
                           Facebook
                         </a>
                       </div>

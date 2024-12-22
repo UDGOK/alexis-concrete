@@ -44,6 +44,14 @@ const config: Config = {
         },
         'secondary': '#4a4a4a',
         'accent': '#ff4d4d',
+        reserve: {
+          gold: '#C6A467',
+          black: '#1E1E1E',
+          cream: '#F8F8F8',
+          brown: '#3D3D3D',
+          'gold-light': '#D4B77D',
+          'gold-dark': '#B89355',
+        },
       },
       spacing: {
         'section': '10rem',
