@@ -1,13 +1,13 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import Navigation from '@/components/Navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Alexis Concrete',
-  description: 'Quality concrete solutions for residential and commercial projects',
+  title: 'Alexis Concrete | Quality Concrete Solutions in Tulsa',
+  description: 'Expert concrete services for residential and commercial projects in Tulsa. Specializing in driveways, patios, foundations, and decorative concrete.',
+  keywords: 'concrete contractor, concrete services, Tulsa concrete, residential concrete, commercial concrete, concrete driveways, concrete patios, concrete foundations',
 }
 
 export default function RootLayout({
@@ -17,10 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <Navigation />
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
