@@ -8,6 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="h-screen relative flex items-center justify-center">
         <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/50"></div>
           <Image
             src="/images/placeholder.jpg"
             alt="Concrete Construction"
@@ -15,7 +16,6 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-white">
           <h1 className="text-6xl font-bold mb-4">
