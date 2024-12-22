@@ -8,7 +8,7 @@ export default function Home() {
       <section className="h-screen relative flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero.jpg"
+            src="/images/placeholder.jpg"
             alt="Concrete Construction"
             fill
             className="object-cover"
@@ -51,7 +51,7 @@ export default function Home() {
               >
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src={service.image}
+                    src="/images/placeholder.jpg"
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -82,7 +82,7 @@ export default function Home() {
               >
                 <div className="aspect-[16/9] relative">
                   <Image
-                    src={project.image}
+                    src="/images/placeholder.jpg"
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -128,7 +128,7 @@ export default function Home() {
               className="relative aspect-square"
             >
               <Image
-                src="/images/about.jpg"
+                src="/images/placeholder.jpg"
                 alt="About Alexis Concrete"
                 fill
                 className="object-cover rounded-lg"
