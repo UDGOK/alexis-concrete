@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -16,120 +17,140 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    },
+    open: {
+      opacity: 1,
+      height: 'auto',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
+  }
+
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logo.svg"
-              alt="Alexis Concrete"
-              width={150}
-              height={40}
-              className={isScrolled ? 'filter-none' : 'filter invert'}
-            />
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link href="/services/asphalt" className="hover:text-gray-300">
-                Asphalt
-              </Link>
-              <Link href="/services/concrete" className="hover:text-gray-300">
-                Concrete
-              </Link>
-              <Link href="/services/striping" className="hover:text-gray-300">
-                Parking Lot Striping
-              </Link>
-              <Link href="/contact" className="hover:text-gray-300">
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-300 focus:outline-none"
-            >
-              <span className="sr-only">Open main menu</span>
-              {!isMenuOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-white' : 'bg-transparent'
+    }`}>
+      <div className="container-custom">
+        <div className="flex justify-between items-center h-24">
+          {/* Logo */}
+          <Link href="/" className="relative z-50">
+            <span className="text-2xl font-bold">
+              {isScrolled ? (
+                <span className="text-black">Alexis Concrete</span>
               ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <span className="text-white">Alexis Concrete</span>
               )}
-            </button>
-          </div>
-        </div>
-      </div>
+            </span>
+          </Link>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-black text-white">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="/services/asphalt"
-              className="block px-3 py-2 hover:bg-gray-900"
-              onClick={() => setIsMenuOpen(false)}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link 
+              href="/services/asphalt" 
+              className={`nav-link ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Asphalt
             </Link>
-            <Link
-              href="/services/concrete"
-              className="block px-3 py-2 hover:bg-gray-900"
-              onClick={() => setIsMenuOpen(false)}
+            <Link 
+              href="/services/concrete" 
+              className={`nav-link ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Concrete
             </Link>
-            <Link
-              href="/services/striping"
-              className="block px-3 py-2 hover:bg-gray-900"
-              onClick={() => setIsMenuOpen(false)}
+            <Link 
+              href="/services/striping" 
+              className={`nav-link ${isScrolled ? 'text-black' : 'text-white'}`}
             >
-              Parking Lot Striping
+              Striping
             </Link>
-            <Link
-              href="/contact"
-              className="block px-3 py-2 hover:bg-gray-900"
-              onClick={() => setIsMenuOpen(false)}
+            <Link 
+              href="/contact" 
+              className={`nav-link ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Contact
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`md:hidden z-50 p-2 ${
+              isScrolled || isMenuOpen ? 'text-black' : 'text-white'
+            }`}
+          >
+            <div className="w-6 flex flex-col space-y-1">
+              <motion.span
+                animate={isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                className="w-full h-0.5 bg-current"
+              />
+              <motion.span
+                animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-full h-0.5 bg-current"
+              />
+              <motion.span
+                animate={isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                className="w-full h-0.5 bg-current"
+              />
+            </div>
+          </button>
         </div>
-      )}
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="fixed inset-0 bg-white z-40 md:hidden"
+          >
+            <div className="container-custom h-full flex flex-col justify-center">
+              <div className="space-y-8 text-center">
+                <Link 
+                  href="/services/asphalt"
+                  className="block text-3xl font-light hover:font-normal transition-all"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Asphalt
+                </Link>
+                <Link 
+                  href="/services/concrete"
+                  className="block text-3xl font-light hover:font-normal transition-all"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Concrete
+                </Link>
+                <Link 
+                  href="/services/striping"
+                  className="block text-3xl font-light hover:font-normal transition-all"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Striping
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="block text-3xl font-light hover:font-normal transition-all"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }
