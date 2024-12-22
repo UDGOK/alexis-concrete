@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -214,7 +216,7 @@ export default function Home() {
 const services = [
   {
     title: 'Concrete Driveways',
-    description: 'Custom designed and expertly installed driveways that enhance your property's value and curb appeal.',
+    description: "Custom designed and expertly installed driveways that enhance your property's value and curb appeal.",
     image: '/images/services/driveways.jpg'
   },
   {
