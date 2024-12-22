@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -19,36 +18,23 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-white">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl md:text-8xl font-medium mb-6"
-          >
-            Building Strong <br />Foundations
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl font-light max-w-2xl"
-          >
+          <h1 className="text-6xl font-bold mb-4">
+            Building Strong Foundations
+          </h1>
+          <p className="text-xl mb-8">
             Quality concrete solutions for residential and commercial projects.
-          </motion.p>
+          </p>
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-6xl font-medium mb-16">Our Services</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden"
               >
                 <div className="aspect-[4/3] relative">
@@ -63,7 +49,7 @@ export default function Home() {
                   <h3 className="text-2xl font-medium mb-4">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -72,14 +58,11 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-black text-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-6xl font-medium mb-16">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden"
               >
                 <div className="aspect-[16/9] relative">
@@ -94,7 +77,7 @@ export default function Home() {
                   <h3 className="text-2xl font-medium mb-4">{project.title}</h3>
                   <p className="text-gray-400">{project.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -104,12 +87,8 @@ export default function Home() {
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-4xl md:text-6xl font-medium mb-8">About Us</h2>
+            <div>
+              <h2 className="text-4xl font-bold mb-8">About Us</h2>
               <p className="text-xl text-gray-600 mb-6">
                 With over 20 years of experience, Alexis Concrete has been delivering quality concrete solutions to residential and commercial clients.
               </p>
@@ -122,20 +101,15 @@ export default function Home() {
                 <li>✓ Quality Guaranteed</li>
                 <li>✓ Free Estimates</li>
               </ul>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="relative aspect-square"
-            >
+            </div>
+            <div className="relative aspect-square">
               <Image
                 src="/images/placeholder.jpg"
                 alt="About Alexis Concrete"
                 fill
                 className="object-cover rounded-lg"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +117,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-black text-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-6xl font-medium mb-16">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Get in Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <p className="text-xl mb-8">
