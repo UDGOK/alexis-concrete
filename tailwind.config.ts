@@ -4,39 +4,26 @@ const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      },
-    },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['Neue Montreal', 'sans-serif'],
       },
-      height: {
-        '70vh': '70vh',
-        '80vh': '80vh',
-        '90vh': '90vh',
+      fontSize: {
+        'display': ['4.5rem', { lineHeight: '1.1' }],
+        'h1': ['3.5rem', { lineHeight: '1.2' }],
+        'h2': ['2.5rem', { lineHeight: '1.3' }],
+        'h3': ['2rem', { lineHeight: '1.4' }],
+        'body': ['1.125rem', { lineHeight: '1.6' }],
       },
-      maxWidth: {
-        '8xl': '88rem',
-        '9xl': '96rem',
+      colors: {
+        'primary': '#1a1a1a',
+        'secondary': '#4a4a4a',
+        'accent': '#ff4d4d',
       },
       spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
-      },
-      zIndex: {
-        '100': '100',
+        'section': '10rem',
       },
     },
   },
