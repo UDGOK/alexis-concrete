@@ -5,15 +5,21 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [scrollDirection, setScrollDirection] = useState('up')
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const currentScrollY = window.scrollY
+
+      setIsScrolled(currentScrollY > 50)
+      setScrollDirection(currentScrollY > lastScrollY ? 'down' : 'up')
+      setLastScrollY(currentScrollY)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   useEffect(() => {
     if (isOpen) {
@@ -68,8 +74,43 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 mix-blend-difference ${isScrolled ? 'py-4' : 'py-6'}`}>
+      <nav className={`fixed w-full z-50 mix-blend-difference transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'}`}>
         <div className="container mx-auto px-6">
+          {/* Top Bar - Only visible when not scrolled */}
+          <AnimatePresence>
+            {!isScrolled && scrollDirection === 'up' && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                className="flex justify-between items-center mb-6 text-white text-sm font-light"
+              >
+                <div className="flex items-center space-x-8">
+                  <a href="tel:+1234567890" className="hover:text-gray-300 transition-colors">
+                    (123) 456-7890
+                  </a>
+                  <a href="mailto:info@alexisconcrete.com" className="hover:text-gray-300 transition-colors">
+                    info@alexisconcrete.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-8">
+                  <a href="#" className="hover:text-gray-300 transition-colors">
+                    Instagram
+                  </a>
+                  <a href="#" className="hover:text-gray-300 transition-colors">
+                    Facebook
+                  </a>
+                  <span className="w-px h-4 bg-white/30"></span>
+                  <a href="#services" className="hover:text-gray-300 transition-colors">
+                    Get a Quote
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Main Navigation */}
           <div className="flex items-center justify-between">
             <Link 
               href="/" 
