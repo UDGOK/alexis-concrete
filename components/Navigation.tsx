@@ -84,7 +84,7 @@ export default function Navigation() {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
-                className="flex justify-between items-center mb-6 text-white text-sm font-light"
+                className="flex justify-between items-center mb-6 text-white text-base font-normal"
               >
                 <div className="flex items-center space-x-8">
                   <a href="tel:+1234567890" className="hover:text-gray-300 transition-colors">
@@ -102,7 +102,7 @@ export default function Navigation() {
                     Facebook
                   </a>
                   <span className="w-px h-4 bg-white/30"></span>
-                  <a href="#services" className="hover:text-gray-300 transition-colors">
+                  <a href="#services" className="hover:text-gray-300 transition-colors font-medium">
                     Get a Quote
                   </a>
                 </div>
@@ -114,7 +114,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <Link 
               href="/" 
-              className="text-2xl font-light text-white"
+              className="text-3xl font-medium text-white"
               onClick={() => setIsOpen(false)}
             >
               Alexis Concrete
@@ -168,7 +168,7 @@ export default function Navigation() {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="group inline-block text-white text-5xl md:text-7xl font-light hover:text-gray-400 transition-colors duration-300"
+                          className="group inline-block text-white text-6xl md:text-8xl font-medium hover:text-gray-400 transition-colors duration-300"
                         >
                           {item.name}
                           <span className="block h-0.5 w-0 group-hover:w-full bg-white transition-all duration-300"></span>
@@ -176,26 +176,26 @@ export default function Navigation() {
                       </div>
                     ))}
                   </div>
-                  <div className="text-white space-y-8">
+                  <div className="text-white space-y-12">
                     <div>
-                      <h3 className="text-lg font-light mb-4">Contact</h3>
-                      <a href="tel:+1234567890" className="text-2xl hover:text-gray-400 transition-colors duration-300">
+                      <h3 className="text-xl font-medium mb-4">Contact</h3>
+                      <a href="tel:+1234567890" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
                         (123) 456-7890
                       </a>
                     </div>
                     <div>
-                      <h3 className="text-lg font-light mb-4">Email</h3>
-                      <a href="mailto:info@alexisconcrete.com" className="text-2xl hover:text-gray-400 transition-colors duration-300">
+                      <h3 className="text-xl font-medium mb-4">Email</h3>
+                      <a href="mailto:info@alexisconcrete.com" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
                         info@alexisconcrete.com
                       </a>
                     </div>
                     <div>
-                      <h3 className="text-lg font-light mb-4">Follow</h3>
-                      <div className="flex space-x-6">
-                        <a href="#" className="text-2xl hover:text-gray-400 transition-colors duration-300">
+                      <h3 className="text-xl font-medium mb-4">Follow</h3>
+                      <div className="flex space-x-8">
+                        <a href="#" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
                           Instagram
                         </a>
-                        <a href="#" className="text-2xl hover:text-gray-400 transition-colors duration-300">
+                        <a href="#" className="text-3xl font-medium hover:text-gray-400 transition-colors duration-300">
                           Facebook
                         </a>
                       </div>
