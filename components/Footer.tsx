@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -72,7 +74,7 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t border-gray-800">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Alexis Concrete. All rights reserved.
+            {new Date().getFullYear()} Alexis Concrete. All rights reserved.
           </p>
         </div>
       </div>
