@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="min-h-screen flex flex-col">
+    <html lang="en" className={`${inter.variable}`}>
+      <body className={`min-h-screen flex flex-col antialiased`}>
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />

@@ -7,14 +7,19 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: '#1a365d',
-        secondary: '#2d3748',
-        accent: '#ed8936',
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
+    },
+    extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       height: {
         '70vh': '70vh',
@@ -34,4 +39,5 @@ const config: Config = {
   },
   plugins: [],
 }
+
 export default config
