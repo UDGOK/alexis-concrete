@@ -1,8 +1,17 @@
-# Alexis Concrete Website
+# Alexis Concrete Website - Build 1.2
 
 A modern, responsive website for Alexis Concrete built with Next.js 14, TailwindCSS, and Framer Motion.
 
-## Current State (as of December 22, 2024)
+## Build 1.2 Features (December 22, 2024)
+- Full-screen overlay menu inspired by wearemotto.com
+- Elegant color scheme inspired by Starbucks Reserve
+  - Gold (#C6A467) for accents and primary actions
+  - Black (#1E1E1E) for backgrounds
+  - Cream (#F8F8F8) for light sections
+  - Brown (#3D3D3D) for text
+- Smooth animations and transitions
+- Responsive design for all screen sizes
+- Modern, sophisticated UI
 
 ### Tech Stack
 - Next.js 14.0.4
@@ -15,9 +24,10 @@ A modern, responsive website for Alexis Concrete built with Next.js 14, Tailwind
    - Responsive layout
    - Clean, professional aesthetic
    - Optimized images and performance
+   - Luxury-inspired color palette
 
 2. **Navigation**
-   - Full-screen overlay menu (inspired by wearemotto.com)
+   - Full-screen overlay menu
    - Smooth animations
    - Mobile-responsive hamburger menu
    - Contact information panel
@@ -31,7 +41,7 @@ A modern, responsive website for Alexis Concrete built with Next.js 14, Tailwind
 
 ### Deployment
 - Deployed on Vercel
-- Production URL: https://alexis-concrete-ms7obsf55-hyasir786s-projects.vercel.app
+- Production URL: https://alexis-concrete-h6nzokzwp-hyasir786s-projects.vercel.app
 
 ## Development
 

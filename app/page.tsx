@@ -46,42 +46,105 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="py-20 bg-reserve-cream">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-reserve-black">Our Services</h2>
-            <p className="text-reserve-brown max-w-2xl mx-auto">
-              We provide comprehensive concrete solutions for both residential and commercial projects
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow"
-              >
-                <div className="aspect-[4/3] relative">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-reserve-black text-center">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Concrete Services */}
+            <div className="group">
+              <Link href="/services/concrete" className="block">
+                <div className="relative aspect-[16/9] mb-6 overflow-hidden rounded-lg">
                   <Image
-                    src="/images/placeholder.jpg"
-                    alt={service.title}
+                    src="/images/services/concrete-main.jpg"
+                    alt="Concrete Services"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 text-reserve-black">{service.title}</h3>
-                  <p className="text-reserve-brown mb-4">{service.description}</p>
-                  <Link
-                    href="#contact"
-                    className="text-reserve-gold font-semibold hover:text-reserve-gold-dark transition-colors inline-flex items-center"
-                  >
-                    Request Quote
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                <h3 className="text-2xl font-bold mb-4 text-reserve-black group-hover:text-reserve-gold transition-colors">
+                  Concrete Services
+                </h3>
+                <p className="text-reserve-brown mb-6">Expert concrete solutions for residential and commercial projects</p>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/services/concrete/driveways" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Concrete Driveways
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/concrete/patios" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Concrete Patios
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/concrete/foundations" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Foundations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/concrete/stamped" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Stamped Concrete
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/concrete/pools" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Swimming Pools
+                    </Link>
+                  </li>
+                </ul>
+              </Link>
+            </div>
+
+            {/* Asphalt Services */}
+            <div className="group">
+              <Link href="/services/asphalt" className="block">
+                <div className="relative aspect-[16/9] mb-6 overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/services/asphalt-main.jpg"
+                    alt="Asphalt Services"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
-              </div>
-            ))}
+                <h3 className="text-2xl font-bold mb-4 text-reserve-black group-hover:text-reserve-gold transition-colors">
+                  Asphalt Services
+                </h3>
+                <p className="text-reserve-brown mb-6">Professional asphalt paving and maintenance solutions</p>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/services/asphalt/pavements" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Asphalt Pavements
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/asphalt/resurfacing" className="flex items-center text-reserve-brown hover:text-reserve-gold transition-colors">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      Asphalt Resurfacing
+                    </Link>
+                  </li>
+                </ul>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

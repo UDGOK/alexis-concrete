@@ -111,10 +111,38 @@ export default function Navigation() {
                   {/* Menu Links */}
                   <div className="space-y-8">
                     {[
-                      { name: 'Services', href: '/#services' },
-                      { name: 'Projects', href: '/#projects' },
-                      { name: 'About', href: '/#about' },
-                      { name: 'Contact', href: '/#contact' }
+                      { 
+                        name: 'Home',
+                        href: '/',
+                      },
+                      { 
+                        name: 'Services',
+                        href: '/services',
+                        subItems: [
+                          {
+                            name: 'Concrete Services',
+                            href: '/services/concrete',
+                            subItems: [
+                              { name: 'Concrete Driveways', href: '/services/concrete/driveways' },
+                              { name: 'Concrete Patios', href: '/services/concrete/patios' },
+                              { name: 'Foundations', href: '/services/concrete/foundations' },
+                              { name: 'Stamped Concrete', href: '/services/concrete/stamped' },
+                              { name: 'Swimming Pools', href: '/services/concrete/pools' }
+                            ]
+                          },
+                          {
+                            name: 'Asphalt Services',
+                            href: '/services/asphalt',
+                            subItems: [
+                              { name: 'Asphalt Pavements', href: '/services/asphalt/pavements' },
+                              { name: 'Asphalt Resurfacing', href: '/services/asphalt/resurfacing' }
+                            ]
+                          }
+                        ]
+                      },
+                      { name: 'Projects', href: '/projects' },
+                      { name: 'About', href: '/about' },
+                      { name: 'Contact', href: '/contact' }
                     ].map((item, index) => (
                       <motion.div
                         key={item.name}
@@ -123,15 +151,46 @@ export default function Navigation() {
                         initial="closed"
                         animate="open"
                         exit="closed"
+                        className="relative"
                       >
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="group inline-block text-reserve-cream text-6xl md:text-8xl font-medium hover:text-reserve-gold transition-colors duration-300"
+                          className="group inline-block text-reserve-cream text-4xl md:text-6xl font-medium hover:text-reserve-gold transition-colors duration-300"
                         >
                           {item.name}
                           <span className="block h-0.5 w-0 group-hover:w-full bg-reserve-gold transition-all duration-300"></span>
                         </Link>
+                        {item.subItems && (
+                          <div className="mt-4 ml-8 space-y-4">
+                            {item.subItems.map((subItem) => (
+                              <div key={subItem.name} className="group">
+                                <Link
+                                  href={subItem.href}
+                                  onClick={() => setIsOpen(false)}
+                                  className="inline-block text-reserve-cream text-2xl md:text-3xl font-medium hover:text-reserve-gold transition-colors duration-300"
+                                >
+                                  {subItem.name}
+                                  <span className="block h-0.5 w-0 group-hover:w-full bg-reserve-gold transition-all duration-300"></span>
+                                </Link>
+                                {subItem.subItems && (
+                                  <div className="mt-2 ml-6 space-y-2">
+                                    {subItem.subItems.map((subSubItem) => (
+                                      <Link
+                                        key={subSubItem.name}
+                                        href={subSubItem.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className="block text-reserve-cream/80 text-lg md:text-xl hover:text-reserve-gold transition-colors duration-300"
+                                      >
+                                        {subSubItem.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </motion.div>
                     ))}
                   </div>
