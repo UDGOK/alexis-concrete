@@ -1,75 +1,74 @@
-# Alexis Concrete Website - Build 1.2
+# Alexis Concrete Website (V1.3.0)
 
-A modern, responsive website for Alexis Concrete built with Next.js 14, TailwindCSS, and Framer Motion.
+A modern, responsive website for Alexis Concrete, built with Next.js and TailwindCSS.
 
-## Build 1.2 Features (December 22, 2024)
-- Full-screen overlay menu inspired by wearemotto.com
+## Features
+
+- Modern, responsive design
 - Elegant color scheme inspired by Starbucks Reserve
-  - Gold (#C6A467) for accents and primary actions
-  - Black (#1E1E1E) for backgrounds
-  - Cream (#F8F8F8) for light sections
-  - Brown (#3D3D3D) for text
-- Smooth animations and transitions
-- Responsive design for all screen sizes
-- Modern, sophisticated UI
+- Comprehensive service pages for both concrete and asphalt services
+- Interactive navigation with smooth animations
+- Contact form for customer inquiries
+- Projects showcase section
+- About page with company information
+- Optimized images using Unsplash CDN
 
-### Tech Stack
+### Services
+
+#### Concrete Services
+- Concrete Driveways
+- Concrete Patios
+- Foundations
+- Stamped Concrete
+- Swimming Pools
+
+#### Asphalt Services
+- Asphalt Pavements
+- Asphalt Resurfacing
+
+## Technology Stack
+
 - Next.js 14.0.4
+- React 18
 - TailwindCSS
 - Framer Motion
 - TypeScript
 
-### Key Features
-1. **Modern Design**
-   - Responsive layout
-   - Clean, professional aesthetic
-   - Optimized images and performance
-   - Luxury-inspired color palette
-
-2. **Navigation**
-   - Full-screen overlay menu
-   - Smooth animations
-   - Mobile-responsive hamburger menu
-   - Contact information panel
-
-3. **Sections**
-   - Hero section with call-to-action
-   - Services showcase
-   - Project portfolio
-   - About section
-   - Contact form
-
-### Deployment
-- Deployed on Vercel
-- Production URL: https://alexis-concrete-h6nzokzwp-hyasir786s-projects.vercel.app
-
 ## Development
 
+To run the development server:
+
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+# or
+yarn dev
 ```
 
-## Project Structure
-```
-alexis-concrete/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-├── components/
-│   └── Navigation.tsx
-├── public/
-│   └── images/
-├── next.config.js
-├── tailwind.config.ts
-└── package.json
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deployment
+
+The website is deployed on Vercel with automatic deployments on push to the main branch.
+
+## Version History
+
+### V1.3.0 (December 22, 2024)
+- Added all service pages for concrete and asphalt services
+- Created About, Projects, and Contact pages
+- Implemented comprehensive footer with proper navigation
+- Added Unsplash images for all services
+- Fixed various styling and navigation issues
+
+### V1.2.0
+- Added main services section
+- Implemented navigation menu
+- Created homepage layout
+
+### V1.1.0
+- Initial project setup
+- Basic homepage implementation
+- Added TailwindCSS configuration
+
+### V1.0.0
+- Project initialization
+- Basic Next.js setup
