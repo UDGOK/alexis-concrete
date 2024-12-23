@@ -22,8 +22,8 @@ export default function ConcreteDrivewaysPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/services/driveways.jpg"
-                alt="Concrete Driveway"
+                src="https://images.unsplash.com/photo-1597309792995-1d77b591e614?q=80&w=1200"
+                alt="Concrete Driveways"
                 fill
                 className="object-cover rounded-lg"
                 sizes="(max-width: 1024px) 100vw, 50vw"

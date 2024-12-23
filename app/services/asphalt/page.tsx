@@ -5,13 +5,13 @@ const asphaltServices = [
   {
     title: 'Asphalt Pavements',
     description: 'Professional asphalt paving for driveways, parking lots, and roads',
-    image: '/images/services/asphalt-pavements.jpg',
+    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1200',
     link: '/services/asphalt/pavements'
   },
   {
     title: 'Asphalt Resurfacing',
     description: 'Restore and protect your existing asphalt surfaces',
-    image: '/images/services/asphalt-resurfacing.jpg',
+    image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=1200',
     link: '/services/asphalt/resurfacing'
   }
 ]

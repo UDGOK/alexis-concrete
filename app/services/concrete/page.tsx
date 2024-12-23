@@ -5,31 +5,31 @@ const concreteServices = [
   {
     title: 'Concrete Driveways',
     description: 'Custom-designed driveways that enhance your home\'s curb appeal and value',
-    image: '/images/services/driveways.jpg',
+    image: 'https://images.unsplash.com/photo-1597309792995-1d77b591e614?q=80&w=1200',
     link: '/services/concrete/driveways'
   },
   {
     title: 'Concrete Patios',
     description: 'Beautiful outdoor living spaces designed for comfort and durability',
-    image: '/images/services/patios.jpg',
+    image: 'https://images.unsplash.com/photo-1617850687395-620757feb1f3?q=80&w=1200',
     link: '/services/concrete/patios'
   },
   {
     title: 'Foundations',
     description: 'Solid foundations for residential and commercial buildings',
-    image: '/images/services/foundations.jpg',
+    image: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=1200',
     link: '/services/concrete/foundations'
   },
   {
     title: 'Stamped Concrete',
-    description: 'Decorative concrete solutions that mimic natural materials',
-    image: '/images/services/stamped.jpg',
+    description: 'Decorative concrete solutions for unique and beautiful surfaces',
+    image: 'https://images.unsplash.com/photo-1578862973944-aa4f4d7a5791?q=80&w=1200',
     link: '/services/concrete/stamped'
   },
   {
     title: 'Swimming Pools',
-    description: 'Custom pool designs with expert concrete construction',
-    image: '/images/services/pools.jpg',
+    description: 'Custom pool designs that transform your backyard into a paradise',
+    image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200',
     link: '/services/concrete/pools'
   }
 ]
