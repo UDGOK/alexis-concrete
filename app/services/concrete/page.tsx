@@ -4,7 +4,7 @@ import Link from 'next/link'
 const concreteServices = [
   {
     title: 'Concrete Driveways',
-    description: 'Custom-designed driveways that enhance your home's curb appeal and value',
+    description: 'Custom-designed driveways that enhance your home\'s curb appeal and value',
     image: '/images/services/driveways.jpg',
     link: '/services/concrete/driveways'
   },
